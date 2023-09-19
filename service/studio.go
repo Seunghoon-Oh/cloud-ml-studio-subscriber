@@ -17,7 +17,7 @@ func SetupNotebookCircuitBreaker() {
 
 func CreateNotebook() {
 	if cb.Ready() {
-		resp, err := httpClient.Post("http://cloud-ml-pipeline-manager.cloud-ml-pipeline:8082/pipeline", "", nil)
+		resp, err := httpClient.Post("http://cloud-ml-studio-manager.cloud-ml-studio:8082/studio", "", nil)
 		if err != nil {
 			fmt.Println(err)
 			cb.Fail()
